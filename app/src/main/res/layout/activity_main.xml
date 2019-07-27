@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#dedede"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.MainActivity">
+
+    <ProgressBar
+        android:padding="15dp"
+        android:background="@drawable/progress_background"
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+    <androidx.appcompat.widget.Toolbar
+        android:background="#F17B2C"
+        app:title="Тайтлы"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyToolbar"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/title"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:text="Тайтлы"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:visibility="gone"
+                android:hint="Search"
+                android:id="@+id/searchEditText"
+                android:layout_toRightOf="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+            <Button
+                android:id="@+id/btnToolbar"
+                android:background="@drawable/ic_action_search"
+                android:theme="@style/Base.Widget.AppCompat.ImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <com.google.android.material.textfield.TextInputLayout
+        android:visibility="gone"
+        android:id="@+id/input_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/input_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:hint="@string/hint_search" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/parseRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSend"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true"/>
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnSend"
+        android:text="send"
+        android:layout_below="@+id/input_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvSerials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:visibility="gone"
+        android:text="Search"
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvSerials"/>
+
+
+</RelativeLayout>

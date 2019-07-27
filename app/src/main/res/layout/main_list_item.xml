@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSerial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/imageAnime"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/imageAnime"
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Konosuba"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:maxLines="3"
+                android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_toRightOf="@id/imageAnime"
+                    android:layout_below="@id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Koomedy Isekai"
+                    android:textColor="#7e7e7e"
+                    android:textSize="15sp" />
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/tvStatus"
+                android:text="Выпускается"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:background="@drawable/status_tv_shape"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
